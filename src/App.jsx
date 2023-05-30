@@ -1,27 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import hero from './components/hero';
-import Demo from './components/demo';
-import './App.css'
+import Hero from "./components/Hero";
+import Demo from "./components/Demo";
 
-function App() {
-  const [count, setCount] = useState(0)
+import "./App.css";
 
+const App = () => {
   return (
-    <>
-      <main>
-        <div className='main'>
-          <div className='gradient'></div>
-        </div>
-        <div className='app'>
-          <Hero />
-          <Demo />
-        </div>
-      </main>
-    </>
-  )
-}
+    <main>
+      <div className='main'>
+        <div className='gradient' />
+      </div>
 
-export default App
+      <div className='app'>
+        <Hero />
+        <Demo />
+      </div>
+    </main>
+  );
+};
+
+export default App;
