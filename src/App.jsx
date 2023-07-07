@@ -10,7 +10,7 @@ const App = () => {
         <div className='gradient' />
       </div>
 
-      <div className='app items-center'>
+      <div className='app'>
         <Hero />
         <Demo />
       </div>
