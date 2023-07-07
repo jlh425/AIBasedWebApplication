@@ -11,7 +11,7 @@ const App = () => {
       </div>
 
       <div className='app'>
-        <Hero className='Hero' />
+        <Hero className='hero' />
         <Demo />
       </div>
     </main>
