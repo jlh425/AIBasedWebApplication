@@ -5,16 +5,18 @@ const rapidApiKey = import.meta.env.VITE_RAPID_API_ARTICLE_KEY;
 export const articleApi = createApi({
   reducerPath: "articleApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://gpt-summarization.p.rapidapi.com/summarize",
-    prepareHeaders: (headers) =>{
-        headers.set("X-RapidAPI-Key", "rapidApiKey");
-        headers.set("X-RapidAPI-Host", "https://gpt-summarization.p.rapidapi.com/summarize");
-        return headers;
-    }
+    baseUrl: "https://article-extractor-and-summarizer.p.rapidapi.com",
+    prepareHeaders: (headers) => {
+      headers.set(
+        "X-RapidAPI-Key", "a199b82d2amsh4693bf6bd668412p17b5cdjsn93d5d2801a0c");
+      headers.set("X-RapidAPI-Host", "article-extractor-and-summarizer.p.rapidapi.com");
+      return headers;
+    },
   }),
   endpoints: (builder) => ({
     getSummary: builder.query({
-      query: (params) => `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=3`
+      query: (params) =>
+        `/summarize?url=${encodeURIComponent(params.articleUrl)}&length=10&html=true&lang=en`,
     }),
   }),
 });
